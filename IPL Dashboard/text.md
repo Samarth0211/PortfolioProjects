@@ -1,1 +1,2 @@
 
+I am thrilled to share that I have created a detailed dashboard for IPL analysis using Power BI and DAX queries. The dashboard incorporates various visualizations and measures that provide a comprehensive view of team and player performance, match statistics, and trends over multiple seasons. With this dashboard, IPL enthusiasts can easily explore and analyze data, make informed decisions, and gain a deeper understanding of the game. I am excited to continue refining and updating this dashboard as new IPL data becomes available.
