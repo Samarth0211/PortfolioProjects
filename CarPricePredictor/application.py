@@ -11,8 +11,9 @@ script_dir = os.path.dirname(__file__)
 
 # Construct the file path
 file_path = os.path.join(script_dir, 'LinearRegression.pkl')
+file_path1 = os.path.join(script_dir, 'Cleaned Car.csv')
 model=pickle.load(open(file_path,'rb'))
-car=pd.read_csv('Cleaned Car.csv')
+car=pd.read_csv(file_path1)
 
 @app.route('/',methods=['GET','POST'])
 def index():
