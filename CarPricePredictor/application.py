@@ -3,10 +3,15 @@ from flask_cors import CORS,cross_origin
 import pickle
 import pandas as pd
 import numpy as np
+import os
 
 app=Flask(__name__)
 cors=CORS(app)
-model=pickle.load(open('LinearRegression.pkl','rb'))
+script_dir = os.path.dirname(__file__)
+
+# Construct the file path
+file_path = os.path.join(script_dir, 'LinearRegression.pkl')
+model=pickle.load(open(file_path,'rb'))
 car=pd.read_csv('Cleaned Car.csv')
 
 @app.route('/',methods=['GET','POST'])
