@@ -3,6 +3,7 @@ from wordcloud import WordCloud
 import pandas as pd
 from collections import Counter
 import emoji
+import os
 
 extractor = URLExtract()
 
@@ -54,7 +55,8 @@ def create_wordcloud(selected_user, df):
 
 
 def most_common_words(selected_user, df):
-    f = open('stop_hinglish.txt', 'r')
+    file_path = os.path.join(os.path.dirname(__file__), 'stop_hinglish.txt')
+    f = open(file_path, 'r')
     stop_words = f.read()
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
